@@ -109,7 +109,7 @@ L1:
 	for(int i=0;i<5;){
 		double x2[2]={mRan->Uniform(-3,3),mRan->Uniform(-3,3)};
 		r.Solve(x2);
-		if(fabs(q3->Eval(r.X()[0],r.X()[1])-f3->GetParameter(0))>1e-8 || fabs(r.X()[0])>3. || fabs(r.X()[1])>3.) continue;
+		if(fabs(q3->Eval(r.X()[0],r.X()[1])-f3->GetParameter(0))>1e-5 || fabs(r.X()[0])>3. || fabs(r.X()[1])>3.) continue;
 		cout<<" f3 = "<<f3->Eval(r.X()[0],r.X()[1])<<endl;
 		cout<<" q3->Eval(r.X()[0],r.X()[1]) = "<<q3->Eval(r.X()[0],r.X()[1])<<endl;
 		cout<<" f3->GetParameter(0) ="<<f3->GetParameter(0)<<endl;

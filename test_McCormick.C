@@ -123,7 +123,7 @@ Double_t iterate(TF2* f3, Int_t it){
 		r.Solve(x2);
 		cout<<" roots ====> "<<r.X()[0]<<"   "<<r.X()[1]<<endl;
 		cout<<" f3 = "<<f3->Eval(r.X()[0],r.X()[1])<<endl;
-		if(fabs(f3->Eval(r.X()[0],r.X()[1]))>1e-8 || fabs(r.X()[0])>3.0 || fabs(r.X()[1])>3.0 ) continue;
+		if(fabs(f3->Eval(r.X()[0],r.X()[1]))>1e-5 || fabs(r.X()[0])>3.0 || fabs(r.X()[1])>3.0 ) continue;
 //		cout<<" fabs(f3->Eval(r.X()[0],r.X()[1])) = "<<fabs(f3->Eval(r.X()[0],r.X()[1]))<<endl;
 		//		roothist->Fill(r.X()[0],r.X()[1],r.X()[2]);
 		
